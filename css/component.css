@@ -1,0 +1,137 @@
+/* General styles for the modal */
+
+.container {
+	background: #e74c3c;
+	min-height: 100%;
+}
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.md-content {
+	color: #fff;
+	background: #e74c3c;
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.md-content h3 {
+	margin: 0;
+	text-align: center;
+	font-size: 2.4em;
+}
+
+.md-content > div {
+	padding: 30px 40px 30px;
+	margin: 0;
+	font-size: 1.15em;
+}
+
+.md-content > div p {
+	margin: 0 0 .5em;
+}
+
+.md-content button {
+	display: block;
+	font-size: 0.8em;
+}
+
+.md-content .button1 {
+	margin-top: 1em;
+	margin-bottom: 4em;
+}
+
+.md-content .button2 {
+	margin-top: 4em;
+	margin-bottom: 1em;
+}
+
+textarea, input[type="text"]{
+	-webkit-appearance:none;
+	appearance: none;
+	box-shadow:none;
+	border: none;
+	outline:none;
+	padding: 0 1em;
+	font-size:.8em;
+	height: 2.8em;
+	vertical-align: middle;
+	width: 73%;
+	overflow:auto;
+	text-align:left;
+	background-color: rgba(255,255,255,.5);
+	border-radius: 3px;
+	border: solid 5px #fff;
+	color: #fff;
+}
+
+*:focus {
+    outline: 0;
+}
+
+/* Effect */
+
+.md-effect-1 .md-content {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-1 .md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+@media screen and (max-width: 32em) {
+	body { font-size: 75%; }
+}

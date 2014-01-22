@@ -5,10 +5,13 @@
 <title>Funky Llama</title>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/general.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Cabin:600|Noticia+Text:400,700,400italic' rel='stylesheet' type='text/css'>
-<meta name="description" content="Handcrafted guitars that look as beautiful as they sound">
-<meta name="author" content="Alain Gagnon, alain@hummingbirdguitars.ca">
-<meta name="copyright" content="Copyright 2013 Alain Gagnon">
+<meta name="description" content="The Funky Llama Mothership">
+<meta name="author" content="Funky Llama, get@funkyllama.ca">
+<meta name="copyright" content="Copyright 2013 Funky Llama">
 
 </head>
 
@@ -17,17 +20,38 @@
 	<table id="wrapper">
 		<tr>
 			 <td>
-				 <h1>Hi! Our names are Daniela and Jared, and we were, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non quam pulvinar, convallis nulla id, pellentesque lectus. Aliquam et massa sit amet turpis luctus tempus nec at massa. </h1>
-				 <ul class="social">
+				 <h1><span class="giga">Hi.</span> We are <a href="ca.linkedin.com/in/danielafunkyllama/">Daniela</a> and <a href="ca.linkedin.com/in/jaredlebel/">Jared</a>, and until recently we were known as Funky Llama. We are changing our name and uploading new work though. In the meantime, you can keep up with our school and entrepreneurial adventures (as well as with our faithful companion, Oli) by following us on <a href="http://instagram.com/funky_llama">Instagram,</a> or email us at <a>get@funkyllama.ca</a></h1>
+				 <!--<ul class="social">
 					 <li><img src="images/facebook-icon.svg"></li>
 					 <li><img src="images/twitter-icon.svg"></li>
 					 <li><img src="images/behance-icon.svg"></li>
-					 <li><img src="images/behance-icon.svg"></li>
-				 </ul>
+					 <li><img src="images/instagram-icon.svg"></li>
+				 </ul>-->
+				 <button class="md-trigger" data-modal="modal-1">have a name suggestion?</button>
 			</td>
-		</tr>
+		</tr>		
    </table>
-    
-<script src="js/nav.js"></script>
+	
+	<div class="md-modal md-effect-1" id="modal-1">
+		<div class="md-content">
+			<div>
+				<button class="md-close button1">nope, changed my mind</button>
+				<p>Shoot! We love the feedback.</p>
+				<form action="emailto:get@funkyllama.ca">
+					<input type="text">
+					<submit placeholder="Submit"></submit>
+				</form>
+				<button class="md-submit button2">My opinion shall be heard!</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="md-overlay"></div><!-- the "background" element -->
+	
+	<script src="js/nav.js"></script>
+	<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+	<script src="js/classie.js"></script>
+	<script src="js/modalEffects.js"></script>
+	
 </body>
 </html>
